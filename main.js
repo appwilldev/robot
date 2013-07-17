@@ -34,10 +34,10 @@ domain.on('error', function(err){
     console.error(err.message);
 });
 
-domain.run(function() {
+//domain.run(function() {
 // analyse file
 for(var i = 2; i < process.argv.length; i ++) {
     analyse.analyse(process.argv[i])
 }
 
-});
+//});
