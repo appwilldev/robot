@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var domain = require('domain').create(),
-    analyse = require('./lib/analyse.js');
+    load = require('./lib/load.js');
 
 /*
 var http = require('http'),
@@ -37,7 +37,7 @@ domain.on('error', function(err){
 //domain.run(function() {
 // analyse file
 for(var i = 2; i < process.argv.length; i ++) {
-    analyse.analyse(process.argv[i])
+    load.load(process.argv[i])
 }
 
 //});
