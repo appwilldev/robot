@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <roboto>
-	<interface url='www.google.com' id='root' child='baidu' cookie='cookie'>
+    <config>
+		<url>www.baidu.com</url>
 		<type> media | xml | json</type>
+		<path>./data/</path>
+        <ratio action='large'>
+            <width>4000</width>
+            <height>1384</height>
+        </ratio>
+    </config>
+	<web id='root' child='baidu' cookie='cookie'>
 		<target>
 			<name>
 				<convert>
@@ -16,13 +24,12 @@
 				</convert>
 				<as>baidu picture</as>
 				<route>
-					<!-- comment here -->
 					<div id='body' class='context' index='1'>
 						<div>
-							<ul id='1'>
+							<ul id='list'>
 								<li>
 									<span>
-										<a index='3'>href</a>
+										<a index='3'>[href]</a>
 									</span>
 								</li>
 							</ul>
@@ -46,9 +53,9 @@
 				</tuple>
 			</cookie>
 		</headers>
-	</interface>
-	<interface id='child' parent='root' child='grandchild' cookie='cookie'>
-	</interface>
-	<interface id='grandchild' parent='root' cookie='true'>
-	</interface>
-</roboto> 
+	</web>
+	<web id='baidu' parent='root' child='grandchild' cookie='cookie'>
+	</web>
+	<web id='grandchild' parent='root' cookie='true'>
+	</web>
+</roboto>
