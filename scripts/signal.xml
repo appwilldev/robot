@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roboto>
+    <config>
+		<url>http://chideat.org/media/index.html</url>
+		<path>./data/</path>
+        <ratio action='large'>
+            <width>4000</width>
+            <height>1384</height>
+        </ratio>
+    </config>
+	<web id='root'>
+		<target>
+			<url>
+				<route>
+					<div id='body'>
+						<div>
+							<ul id='list'>
+								<li>
+									<span>
+										<a>[href]</a>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</route>
+			</url>
+		</target>
+	</web>
+</roboto>

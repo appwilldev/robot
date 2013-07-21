@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roboto>
+    <config>
+		<url>http://chideat.org/media/index.html</url>
+		<path>./data/</path>
+        <ratio action='large'>
+            <width>4000</width>
+            <height>1384</height>
+        </ratio>
+    </config>
+	<web id='root' child='sub'>
+		<target>
+			<url>
+				<route>
+					<div id='body'>
+						<div>
+							<ul id='list'>
+								<li>
+									<span>
+										<a>[href]</a>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</route>
+			</url>
+		</target>
+	</web>
+    <web id='sub' child='third'>
+		<target>
+			<url>
+				<route>
+					<div id='body'>
+						<div>
+							<ul id='list'>
+								<li>
+									<span>
+										<a>[href]</a>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</route>
+			</url>
+		</target>
+	</web>
+    <web id='third'>
+		<target>
+			<url>
+				<route>
+					<div id='body'>
+						<div>
+							<ul id='list'>
+								<li>
+									<span>
+										<a></a>
+									</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</route>
+			</url>
+		</target>
+	</web>
+</roboto>
