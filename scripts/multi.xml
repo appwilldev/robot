@@ -49,6 +49,12 @@
     <web id='third'>
 		<target>
 			<url>
+		        <convert>
+		            <tuple>
+		                <from>/\d/g</from>
+		                <to>category</to>
+		            </tuple>
+		        </convert>
 				<route>
 					<div id='body'>
 						<div>

@@ -11,6 +11,20 @@
 	<web id='root'>
 		<target>
 			<url>
+			    <convert>
+			        <tuple>
+			            <from>chideat</from>
+			            <to>chinat</to>
+			        </tuple>
+			        <tuple>
+			            <from>.html</from>
+			            <to>.jpg</to>
+			        </tuple>
+			        <tuple>
+			            <from>/http/g</from>
+			            <to>https</to>
+			        </tuple>
+			    </convert>
 				<route>
 					<div id='body'>
 						<div>
