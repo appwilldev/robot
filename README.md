@@ -1,6 +1,6 @@
 Robot
 ======
-If you want to fetch resource from tens of thousands of web pages for your every job, then this project can help you to simplify you jobs.
+If you want to fetch resource from tens of thousands of web pages for your everyday job, then this project can help you to simplify you jobs.
 
 How To Use
 ----------
