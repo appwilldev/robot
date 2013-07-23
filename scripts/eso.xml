@@ -2,7 +2,7 @@
 <roboto>
     <config>
 		<url>http://www.eso.org/public/images/viewall/</url>
-		<path>./data/</path>
+		<path>./data/eso.sh</path>
         <ratio action='large'>
             <width>4000</width>
             <height>1384</height>
@@ -23,6 +23,17 @@
 					</div>
 				</route>
 			</url>
+			<next>
+			    <route>
+			        <div id='col3_content'>
+			            <div class='paginator'>
+			                <span class='paginator_next'>
+			                    <a>[href]</a>
+			                </span>
+			            </div>
+			        </div>
+			    </route>
+			</next>
 		</target>
 	</web>
     <web id='sub'>

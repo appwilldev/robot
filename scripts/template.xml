@@ -11,6 +11,10 @@
     </config>
 	<web id='root' child='baidu' cookie='cookie'>
 		<target>
+		    <next>
+		        <route>
+		        </route>
+		    </next>
 			<name>
 				<convert>
 					<tuple>
