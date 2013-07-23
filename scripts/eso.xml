@@ -12,26 +12,14 @@
 		<target>
 			<url>
 				<route>
-					<div id='col3_content'>
-						<div class='subcl'>
-						    <table class='archive_normal'>
-						        <td class='imagerow'>
-						            <a>[href]</a>
-						        </td>
-						    </table>
-						</div>
-					</div>
+				    <selector>#col3_content .subcl .archive_normal .imagerow a</selector>
+				    <attr>href</attr>
 				</route>
 			</url>
 			<next>
 			    <route>
-			        <div id='col3_content'>
-			            <div class='paginator'>
-			                <span class='paginator_next'>
-			                    <a>[href]</a>
-			                </span>
-			            </div>
-			        </div>
+			        <selector>#col3_content .paginator .paginator_next a</selector>
+			        <attr>href</attr>
 			    </route>
 			</next>
 		</target>
@@ -40,16 +28,9 @@
 		<target>
 			<url>
 				<route>
-					<div id='col3_content'>
-					    <div class='subcl'>
-					        <div class='archive_image'>
-					            <div class='image_container'>
-					                <a>[href]</a>
-	 				            </div>
-                            </div>
-                        </div>
-					</div>
-				</route>
+				    <selector>#col3_content .subcl .archive_image .image_container a</selector>
+				    <attr>href</attr>
+			    </route>
 			</url>
 		</target>
 	</web>
