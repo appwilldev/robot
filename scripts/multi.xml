@@ -2,7 +2,7 @@
 <roboto>
     <config>
 		<url>http://chideat.org/media/index.html</url>
-		<path>./data/</path>
+		<path>./data/media</path>
         <ratio action='large'>
             <width>4000</width>
             <height>1384</height>
@@ -12,36 +12,24 @@
 		<target>
 			<url>
 				<route>
-					<div id='body'>
-						<div>
-							<ul id='list'>
-								<li>
-									<span>
-										<a>[href]</a>
-									</span>
-								</li>
-							</ul>
-						</div>
-					</div>
+				    <selector>#list span a</selector>
+				    <attr>href</attr>
 				</route>
 			</url>
+			<next>
+			    <route>
+			        <selector>#next a</selector>
+			        <attr>href</attr>
+			    </route>
+			</next>
 		</target>
 	</web>
     <web id='sub' child='third'>
 		<target>
 			<url>
 				<route>
-					<div id='body'>
-						<div>
-							<ul id='list'>
-								<li>
-									<span>
-										<a>[href]</a>
-									</span>
-								</li>
-							</ul>
-						</div>
-					</div>
+				    <selector>#list li span a</selector>
+				    <attr>href</attr>
 				</route>
 			</url>
 		</target>
@@ -49,24 +37,9 @@
     <web id='third'>
 		<target>
 			<url>
-		        <convert>
-		            <tuple>
-		                <from>/\d/g</from>
-		                <to>category</to>
-		            </tuple>
-		        </convert>
 				<route>
-					<div id='body'>
-						<div>
-							<ul id='list'>
-								<li>
-									<span>
-										<a></a>
-									</span>
-								</li>
-							</ul>
-						</div>
-					</div>
+				    <selector>#list li span a</selector>
+				    <attr>href</attr>
 				</route>
 			</url>
 		</target>
