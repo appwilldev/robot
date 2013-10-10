@@ -2,14 +2,12 @@
 package server
 
 import (
-    "fmt"
     "net"
     "time"
+    "log"
 )
 
-
-func Master(ip, port string) error {
-    host = "127.0.0.1:9101"
+func Master(host string) error {
     l, err := net.Listen("tcp", host)
     if err != nil {
         return err
@@ -23,8 +21,7 @@ func Master(ip, port string) error {
             if ne, ok := e.(net.Error); ok && ne.Temporary() {
                 if tempDelay == 0 {
                     tempDelay = 5 * time.Millisecond
-                }
-                else {
+                } else {
                     tempDelay *= 2
                 }
                 if max := 1 * time.Second; tempDelay > max {
@@ -38,8 +35,12 @@ func Master(ip, port string) error {
         go Server(rw)
         tempDelay = 0
     }
+}
 
 func Server(client net.Conn) error {
     // do read and write
+    log.Println("345")
 
+    defer client.Close()
+    return nil
 }

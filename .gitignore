@@ -1,4 +1,5 @@
 *test*
 *.swp
 data
-node_modules
+bin
+pkg
