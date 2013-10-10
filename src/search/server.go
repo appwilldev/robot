@@ -20,18 +20,8 @@ var ErrDecodeBuf = errors.New("Decode: bytes for decode is to long")
 // do decode 
 // global from GBK to UTF-8
 func decode(data []byte) ([]byte, error) {
-    var buf []byte
-    if len(data) < 1024 {
-        buf = make([]byte, 1024)
-    } else if len(data) < 8192 {
-        buf = make([]byte, 8192)
-    } else if len(data) < 81920 {
-        buf = make([]byte, 81920)
-    } else if len(data) > 819200 {
-        buf = make([]byte, 819200)
-    } else {
-        return data, ErrDecodeBuf
-    }
+    buf := make([]byte, int(float32(len(data)) * 1.1))
+    fmt.Printf("%d\n", len(buf))
     // if error occured, return data itself
     data, _, _ = _code.Conv(data, buf)
     return data, nil
@@ -97,8 +87,9 @@ func crawl(text string) {
     data, err = ioutil.ReadAll(reader)
     // decode to utf8
 
+    log.Printf("%d", len(data))
     data, err = decode(data)
-    log.Println(string(data))
+    log.Printf("%d", len(data))
 }
 
 // search engine
